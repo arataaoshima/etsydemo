@@ -1,0 +1,22 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  background-color: #F1F1F5;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-dafault {
+  background-color: #FEFEFB;
+}
+
+.navbar-brand {
+  font-family: Georgia,serif;
+  font-weight: 400;
+  color: red;
+  font-size: 40px
+}
+
+.center {
+  text-align: center
+}
