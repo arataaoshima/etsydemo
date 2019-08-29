@@ -5,8 +5,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   #process resize_to_limit: [300, 200]
   # Choose what kind of storage to use for this uploader:
   #storage :file
-  storage :dropbox
-  # storage :fog
+  #storage :dropbox
+  if Rails.env.production?
+    storage :fog
+  else
+    storage :file
+  end
   #process resize_to_fill: [100, 100, "Center"]
 
   # Override the directory where uploaded files will be stored.

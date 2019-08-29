@@ -18,10 +18,6 @@ ActiveRecord::Schema.define(version: 2019_08_24_224951) do
     t.decimal "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "image_file_name"
-    t.string "image_content_type"
-    t.integer "image_file_size"
-    t.datetime "image_updated_at"
     t.string "image"
   end
 

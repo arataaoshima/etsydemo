@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 
-<div class="row center">
+<div class="row">
   <% @listings.each do |listing| %>
     <div class="col-md-3">
       <div class="card">
-        <%= image_tag listing.image.url, class: "card-img-top" %>
+          <%= image_tag listing.image.url, class: "card-img-top" %>
         <div class="card-body">
           <div class="card-title">
             <%= listing.name %>
           </div>
           <div class="card-body">
             <%= listing.description %></br>
-            <%= number_to_currency(listing.price) %></br>
+            <%= listing.price %></br>
           </div>
           <%= link_to 'Show', listing, class:"btn btn-link" %></br>
           <%= link_to 'Edit', edit_listing_path(listing), class:"btn btn-link"  %></br>
