@@ -4,7 +4,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   #include CarrierWave::MiniMagick
   #process resize_to_limit: [300, 200]
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  #storage :file
+  storage :dropbox
   # storage :fog
   #process resize_to_fill: [100, 100, "Center"]
 

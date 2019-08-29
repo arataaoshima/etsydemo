@@ -18,7 +18,9 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 
-gem 'carrierwave'
+gem 'carrierwave', '~> 0.9'
+gem 'carrierwave-dropbox'
+gem 'dotenv-rails'
 #gem 'mini_magick'
 #gem 'rmagick'
 # Use Redis adapter to run Action Cable in production
