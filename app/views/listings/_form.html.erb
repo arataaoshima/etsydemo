@@ -1,8 +1,11 @@
 
   <%= form_with(model: listing, local: true, html: { multipart: true }) do |form| %>
     <% if listing.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+      <div id="error_explanation" class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4><%= pluralize(listing.errors.count, "error") %> prohibited this listing from being saved:</h4>
 
         <ul>
           <% listing.errors.full_messages.each do |message| %>
@@ -10,6 +13,7 @@
           <% end %>
         </ul>
       </div>
+
     <% end %>
 
     <div class="form-group">
@@ -26,7 +30,7 @@
       <%= form.label :price %>
       <%= form.text_field :price, class:"form-control" %>
     </div>
-    
+
     <div class="form-group">
       <%= form.label :image %>
       <%= form.file_field :image %>
