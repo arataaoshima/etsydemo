@@ -22,6 +22,8 @@ gem 'carrierwave'
 #gem 'carrierwave-dropbox'
 #gem 'dotenv-rails'
 gem 'fog-aws'
+
+gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 #gem 'mini_magick'
 #gem 'rmagick'
 # Use Redis adapter to run Action Cable in production
