@@ -12,7 +12,10 @@
           </div>
           <div class="card-body">
             <%= listing.description %></br>
-            <%= listing.price %></br>
+            $ <%= listing.price %></br>
+            <% if listing.user %>
+              Sold by: <%= listing.user.name %>
+            <% end %>
           </div>
           <%= link_to 'Show', listing, class:"btn btn-link" %></br>
           <%= link_to 'Edit', edit_listing_path(listing), class:"btn btn-link"  %></br>
