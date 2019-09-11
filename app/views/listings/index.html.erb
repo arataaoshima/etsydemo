@@ -1,6 +1,7 @@
-<p id="notice"><%= notice %></p>
-
-
+<div class="jumbotron center">
+  <h1>Handcrafeted items around the world</h1>
+  <h2>Discover one-of-kind items<h2>
+</div>
 <div class="row">
   <% @listings.each do |listing| %>
     <div class="col-md-3">
@@ -20,7 +21,7 @@
             <% end %>
           </div>
           <%= link_to 'Show', listing, class:"btn btn-link" %></br>
-    
+
         </div>
       </div>
     </div>
