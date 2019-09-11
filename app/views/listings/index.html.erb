@@ -5,7 +5,9 @@
   <% @listings.each do |listing| %>
     <div class="col-md-3">
       <div class="card">
+          <a href=<%= "/listings/#{listing.id}" %>>
           <%= image_tag listing.image.url, class: "card-img-top" %>
+          </a>
         <div class="card-body">
           <div class="card-title">
             <%= listing.name %>
@@ -18,12 +20,12 @@
             <% end %>
           </div>
           <%= link_to 'Show', listing, class:"btn btn-link" %></br>
-          <%= link_to 'Edit', edit_listing_path(listing), class:"btn btn-link"  %></br>
-          <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-link"  %>
+    
         </div>
       </div>
     </div>
   <% end %>
 </div>
-
+<% if user_signed_in? %>
 <%= link_to 'New Listing', new_listing_path, class:"btn btn-link"  %>
+<% end %>

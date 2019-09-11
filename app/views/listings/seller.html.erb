@@ -1,0 +1,30 @@
+<table class="table table-striped table-bordered">
+  <tr>
+    <th class="center">Image</th>
+    <th class="center">Name</th>
+    <th class="center">Description</th>
+    <th class="center">Price</th>
+    <th class="center">Actions</th>
+  </tr>
+    <% @listings.each do |listing| %>
+    <tr>
+      <td class="table-image"><%= image_tag listing.image.url, class: "card-img-top" %></td>
+      <td class="center"><%= listing.name %></td>
+      <td class="center"><%= listing.description %></td>
+      <td class="center"><%= number_to_currency(listing.price) %></td>
+      <td class="center">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Actions Links
+          </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#"><%= link_to 'View', listing_path(listing), class:"btn btn-link"  %></a>
+              <a class="dropdown-item" href="#"><%= link_to 'Edit', edit_listing_path(listing), class:"btn btn-link"  %></a>
+              <a class="dropdown-item" href="#"><%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-link"  %></a>
+            </div>
+          </div>
+      </td>
+    </tr>
+     <% end %>
+</table>
+<%= link_to 'New Listing', new_listing_path, class:"btn btn-link"  %>
