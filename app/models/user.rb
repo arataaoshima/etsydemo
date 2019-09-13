@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   has_many :listings, dependent: :destroy
+
+  has_many :sales, class_name: "Order", foreign_key: "serller_id"
+  has_many :purchases, class_name: "Order", foreign_key: "buyer_id"
+
 end
